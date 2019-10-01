@@ -21,6 +21,11 @@ def LCAsearch(root, n1, n2):
 
     return left_lca if left_lca != None else right_lca
 
+def put(root,key):
+    if (root == None):
+        return Node(key)
 
+    if (key < root.key) : root.left = put(root.left, key)
+    elif key > root.key: root.right = put(root.right, key)
 
 
