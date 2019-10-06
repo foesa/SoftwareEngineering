@@ -28,4 +28,16 @@ def put(root,key):
     if (key < root.key) : root.left = put(root.left, key)
     elif key > root.key: root.right = put(root.right, key)
 
+def inTree(self, root, node):
+    if root == None:
+        return False
+
+    if root.key == node.key:
+        return True
+
+    if (inTree(root.left, node) or inTree(root.right, node)):
+        return True
+
+    return False
+
 

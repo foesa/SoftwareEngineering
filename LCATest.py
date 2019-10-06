@@ -9,6 +9,3 @@ class basicTest(unittest.TestCase):
         root = Node(1)
         self.assertEquals(root.key,1,"Checking if root gets instanciated correctly")
 
-
-
-
