@@ -28,16 +28,23 @@ def put(root,key):
     if (key < root.key) : root.left = put(root.left, key)
     elif key > root.key: root.right = put(root.right, key)
 
-def inTree(self, root, node):
+def inTree(self, root, key):
     if root == None:
         return False
 
-    if root.key == node.key:
+    if root.key == key:
         return True
 
-    if (inTree(root.left, node) or inTree(root.right, node)):
+    if (inTree(root.left, key) or inTree(root.right, key)):
         return True
 
     return False
+
+def inOrderPrint(self,root,res):
+    if root == None:
+        return ""
+    else:
+        res = res + inOrderPrint(root.left)+" "+ root.key + " "+inOrderPrint(root.right)
+        return res
 
 
