@@ -32,3 +32,15 @@ class basicTest(unittest.TestCase):
         lca.put(root, 5)
         self.assertEqual(True,lca.inTree(root,5),"Checking to see if a node is in the tree for lca")
         self.assertEqual(False,lca.inTree(root,0),"If node is not in tree return null")
+
+    def lcaSearch(self):
+        root = lca.Node(7)
+        lca.put(root, 8)
+        lca.put(root, 3)
+        lca.put(root, 1)
+        lca.put(root, 2)
+        lca.put(root, 6)
+        lca.put(root, 4)
+        lca.put(root, 5)
+        self.assertEquals(6,lca.LCAsearch(root,6,1),"Lca for 2 keys in tree")
+        self.assertEquals(False,lca.LCAsearch(root,0,1),"If a key is not in thre tree returns false")

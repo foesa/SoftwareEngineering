@@ -6,9 +6,18 @@ class Node:
         self.right = None
 
 
-def LCAsearch(root, n1, n2):
+def LCAsearch(root, n1, n2,bool):
+    if (bool == False):
+        if (inTree(root,n1) and inTree(root,n2)):
+            bool = True
+        else :
+            return False
+
+    if (n1 or n2) == None:
+        return False
+
     if root is None:
-        return False;
+        return False
 
     if root.key == n1.key or root.key == n2.key:
         return root
