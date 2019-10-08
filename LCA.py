@@ -12,18 +12,14 @@ def LCAsearch(root, n1, n2,bool):
             bool = True
         else :
             return False
-
-    if (n1 or n2) == None:
-        return False
-
     if root is None:
         return False
 
-    if root.key == n1.key or root.key == n2.key:
+    if root.key == n1 or root.key == n2:
         return root
 
-    left_lca = LCAsearch(root.left,n1,n2)
-    right_lca = LCAsearch(root.right,n1,n2)
+    left_lca = LCAsearch(root.left,n1,n2,bool)
+    right_lca = LCAsearch(root.right,n1,n2,bool)
 
     if left_lca and right_lca:
         return root
@@ -36,8 +32,9 @@ def put(root,key):
 
     if (key < root.key) : root.left = put(root.left, key)
     elif key > root.key: root.right = put(root.right, key)
-
-def inTree(self, root, key):
+    else: root.key = key
+    return root
+def inTree(root, key):
     if root == None:
         return False
 
@@ -49,11 +46,10 @@ def inTree(self, root, key):
 
     return False
 
-def inOrderPrint(self,root,res):
+def inOrderPrint(root,res):
     if root == None:
         return ""
     else:
-        res = res + inOrderPrint(root.left)+" "+ root.key + " "+inOrderPrint(root.right)
+        res = inOrderPrint(root.left,res) + str(root.key) + inOrderPrint(root.right,res)
         return res
-
 
