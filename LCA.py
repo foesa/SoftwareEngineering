@@ -5,6 +5,12 @@ class Node:
         self.left = None
         self.right = None
 
+class AcyclicNode:
+    def __init__(self, key):
+        self.key = key
+        self.next = None
+        #Need more info on DAG to proceed
+
 
 def LCAsearch(root, n1, n2,bool):
     if (bool == False):
@@ -53,3 +59,4 @@ def inOrderPrint(root,res):
         res = inOrderPrint(root.left,res) + str(root.key) + inOrderPrint(root.right,res)
         return res
 
+def acyclicGraphBuilder(root,res):
