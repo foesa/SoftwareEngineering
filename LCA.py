@@ -5,11 +5,6 @@ class Node:
         self.left = None
         self.right = None
 
-def LCADAG(root,n1,n2,bool):
-    if(bool == False):
-        if (inDAG(root,n1) and inDAG(root,n2)):
-
-
 def LCAsearch(root, n1, n2,bool):
     if (bool == False):
         if (inTree(root,n1) and inTree(root,n2)):
@@ -58,3 +53,10 @@ def inOrderPrint(root,res):
         return res#
 
 #For DAG implement djikstra's or floyd warshall, use a adjacency list or something and then compare paths. Node that's in common is LCA. if no node in common, root is LCA.
+
+def floydWarshall(graph,V):
+    dist = map(lambda i: map(lambda j: j, i), graph)
+    for k in range(V):
+        for i in range(V):
+            for j in range(V):
+                dist[i][j] = min(dist[i][j] ,dist[i][k]+ dist[k][j])
