@@ -5,11 +5,9 @@ class Node:
         self.left = None
         self.right = None
 
-class AcyclicNode:
-    def __init__(self, key):
-        self.key = key
-        self.next = None
-        #Need more info on DAG to proceed
+def LCADAG(root,n1,n2,bool):
+    if(bool == False):
+        if (inDAG(root,n1) and inDAG(root,n2)):
 
 
 def LCAsearch(root, n1, n2,bool):
@@ -57,6 +55,6 @@ def inOrderPrint(root,res):
         return ""
     else:
         res = inOrderPrint(root.left,res) + str(root.key) + inOrderPrint(root.right,res)
-        return res
+        return res#
 
-def acyclicGraphBuilder(root,res):
+#For DAG implement djikstra's or floyd warshall, use a adjacency list or something and then compare paths. Node that's in common is LCA. if no node in common, root is LCA.
