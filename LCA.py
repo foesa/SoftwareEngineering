@@ -50,13 +50,4 @@ def inOrderPrint(root,res):
         return ""
     else:
         res = inOrderPrint(root.left,res) + str(root.key) + inOrderPrint(root.right,res)
-        return res#
-
-#For DAG implement djikstra's or floyd warshall, use a adjacency list or something and then compare paths. Node that's in common is LCA. if no node in common, root is LCA.
-
-def floydWarshall(graph,V):
-    dist = map(lambda i: map(lambda j: j, i), graph)
-    for k in range(V):
-        for i in range(V):
-            for j in range(V):
-                dist[i][j] = min(dist[i][j] ,dist[i][k]+ dist[k][j])
+        return res
