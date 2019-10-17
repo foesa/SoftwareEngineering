@@ -5,7 +5,6 @@ class Node:
         self.left = None
         self.right = None
 
-
 def LCAsearch(root, n1, n2,bool):
     if (bool == False):
         if (inTree(root,n1) and inTree(root,n2)):
@@ -52,4 +51,3 @@ def inOrderPrint(root,res):
     else:
         res = inOrderPrint(root.left,res) + str(root.key) + inOrderPrint(root.right,res)
         return res
-
