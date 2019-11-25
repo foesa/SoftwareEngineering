@@ -10,3 +10,10 @@ def searchResults(request):
         'user': users
     }
     return render(request,"searchResults.html",context)
+
+def userDetails(request,user):
+    curUser = user
+    context = {
+        'mainUser' : user
+    }
+    return render(request,"userDetails.html",context)
