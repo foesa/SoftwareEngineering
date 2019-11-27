@@ -4,16 +4,13 @@ from github import Github as gt
 def inputPage(request):
     return render(request,"inputPage.html")
 
-def searchResults(request):
-    users = gt.search_users(request.GET['search'])
+def userDetails(request):
+    querys = request.GET['search']
+    print(querys)
+    curUser = gt("foesa", "Monkeyquest12")
+    users = curUser.search_users(str(querys)+" in:login")
+    curUser = users[0]
     context = {
-        'user': users
-    }
-    return render(request,"searchResults.html",context)
-
-def userDetails(request,user):
-    curUser = user
-    context = {
-        'mainUser' : user
+        'mainUser' :curUser
     }
     return render(request,"userDetails.html",context)
