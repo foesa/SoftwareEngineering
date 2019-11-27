@@ -7,7 +7,7 @@ def inputPage(request):
 def userDetails(request):
     querys = request.GET['search']
     print(querys)
-    curUser = gt("foesa", "Monkeyquest12")
+    curUser = gt("foesa", "a787d810507b0aa1100d22410701d9308e347c51")
     users = curUser.search_users(str(querys)+" in:login")
     curUser = users[0]
     context = {
