@@ -1,5 +1,5 @@
 import unittest
-from LcaDAG import Node,LcaDAG
+from LCADAG.LcaDAG import Node,LcaDAG
 
 class testing(unittest.TestCase):
     def test_simple(self):
