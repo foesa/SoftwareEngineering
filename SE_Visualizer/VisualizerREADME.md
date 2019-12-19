@@ -1,4 +1,4 @@
-#Introduction 
+# Introduction 
 - To interrogate the Github API, I created a website using Django to do all the front end stuff such as display users and such and to handle the server side also.
 - As for everything else,  I used a few other libraries to complete the graphs and such like Matplotlib and Seaborn.
 
