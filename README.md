@@ -18,4 +18,4 @@ Repository for all CS3012 related assignments and projects.
 
 ## Assignment #5: Github Access
 - For this I created a seperate readme as it is quite long.
-- Found [here]()
+- Found [here](https://github.com/foesa/SoftwareEngineering/blob/master/SE_Visualizer/VisualizerREADME.md)
