@@ -17,5 +17,5 @@ Repository for all CS3012 related assignments and projects.
 -  Link to report [here](https://github.com/foesa/SoftwareEngineering/blob/master/Software%20Engineering%20Essay%20-%20Metrics.docx)
 
 ## Assignment #5: Github Access
-- For this I created a seperate readme as it is quite long.
+- For this I created a separate readme as it is quite long.
 - Found [here](https://github.com/foesa/SoftwareEngineering/blob/master/SE_Visualizer/VisualizerREADME.md)

@@ -19,3 +19,6 @@ def userDetails(request):
         'mainUser' :curUser
     }
     return render(request,"userDetails.html",context)
+
+def breakdowns(request):
+    return render(request,"breakdowns.html")

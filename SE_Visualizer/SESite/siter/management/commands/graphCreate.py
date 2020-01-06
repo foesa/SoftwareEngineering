@@ -9,7 +9,7 @@ class Command(BaseCommand):
     help = 'Creates Images'
 
     def handle(self, *args, **options):
-        commitList = Commit.objects.filter(repoName='Django')
+        commitList = Commit.objects.filter(repoName='flask')
         dateList = []
         totalList = []
         for i in commitList:
@@ -19,5 +19,8 @@ class Command(BaseCommand):
         commitList2 = Commit.objects.filter(repoName='flask')
         print(dateList)
         print(totalList)
-        scatter1 = plt.scatter(dateList, totalList, s =1, c = 'blue')
-        scatter1.figure.savefig("djangoScatter.png")
+        plt.scatter(dateList, totalList, s =1, c = 'red')
+        plt.title('Additions vs Deletions in Flask')
+        plt.xlabel('Deletions')
+        plt.ylabel('Additions')
+        plt.savefig("flaskScatter.png")
